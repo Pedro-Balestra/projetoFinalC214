@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:projeto_final_c214/widgets/widgetSlider.dart';
 
 import '../widgets/widgetAppBar.dart';
 
@@ -129,18 +130,19 @@ class _HomeState extends State<Home> {
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                      Slider(
+                      WidgetSlider(
                         value: taxa,
                         min: 0,
                         max: 10,
-                        label: "Taxa $taxa %",
+                        labelText: 'Taxa de serviço %',
+                        label: 'Taxa',
                         divisions: 10,
-                        activeColor: const Color(0xffff6600),
-                        inactiveColor: Colors.orange[100],
                         onChanged: (double valor) {
-                          setState(() {
-                            taxa = valor;
-                          });
+                          setState(
+                            () {
+                              taxa = valor;
+                            },
+                          );
                         },
                       ),
                     ],
