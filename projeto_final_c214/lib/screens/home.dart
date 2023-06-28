@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:projeto_final_c214/widgets/widgetSlider.dart';
 
 import '../widgets/widgetAppBar.dart';
 import '../widgets/widgetButton.dart';
+import '../widgets/widgetSlider.dart';
+import '../widgets/widgetTextFormField.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -27,7 +28,7 @@ class _HomeState extends State<Home> {
   void calcularConta() {
     // 1 passo - Receber os valores
     setState(
-      () {
+          () {
         totalconta = double.parse(txtTotal.text);
         qntpessoas = int.parse(txtQtd.text);
 
@@ -96,20 +97,15 @@ class _HomeState extends State<Home> {
                 children: [
                   Padding(
                     padding:
-                        const EdgeInsets.only(top: 40, left: 130, right: 130),
+                    const EdgeInsets.only(top: 40, left: 130, right: 130),
                     child: Image.asset("assets/icon_money.png"),
                   ),
                   const SizedBox(
                     height: 10,
                   ),
-                  TextFormField(
+                  WidgetTextFormField(
                     controller: txtTotal,
-                    keyboardType: TextInputType.number,
-                    textAlign: TextAlign.center,
-                    decoration: const InputDecoration(
-                      labelText: "Total da conta",
-                    ),
-                    style: const TextStyle(fontSize: 18),
+                    labelText: 'Total da conta',
                     validator: (valor) {
                       if (valor!.isEmpty) {
                         return "Campo obrigatório";
@@ -121,76 +117,43 @@ class _HomeState extends State<Home> {
                   const SizedBox(
                     height: 10,
                   ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      const Text(
-                        "Taxa de Serviços %: ",
-                        style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      WidgetSlider(
-                        value: taxa,
-                        min: 0,
-                        max: 10,
-                        labelText: 'Taxa de serviço %',
-                        label: 'Taxa',
-                        divisions: 10,
-                        onChanged: (double valor) {
-                          setState(
+                  WidgetSlider(
+                    value: taxa,
+                    min: 0,
+                    max: 10,
+                    labelText: 'Taxa de serviço %',
+                    label: 'Taxa',
+                    divisions: 10,
+                    onChanged: (double valor) {
+                      setState(
                             () {
-                              taxa = valor;
-                            },
-                          );
+                          taxa = valor;
                         },
-                      ),
-                    ],
+                      );
+                    },
                   ),
-                  TextFormField(
-                      controller: txtQtd,
-                      keyboardType: TextInputType.number,
-                      textAlign: TextAlign.center,
-                      decoration: const InputDecoration(
-                        labelText: "Quantidade de Pessoas",
-                      ),
-                      style: const TextStyle(fontSize: 18),
-                      validator: (valor) {
-                        if (valor!.isEmpty) {
-                          return "Campo obrigatório";
-                        } else {
-                          return null;
-                        }
-                      }),
+                  WidgetTextFormField(
+                    controller: txtQtd,
+                    labelText: 'Quantidade de pessoas',
+                    validator: (valor) {
+                      if (valor!.isEmpty) {
+                        return "Campo obrigatório";
+                      } else {
+                        return null;
+                      }
+                    },
+                  ),
                   const SizedBox(
                     height: 20,
                   ),
-                  // SizedBox(
-                  //   width: double.infinity,
-                  //   height: 50,
-                  //   child: ElevatedButton(
-                  //     onPressed: () {
-                  //       if (_formkey.currentState!.validate()) {
-                  //         calcularConta();
-                  //       }
-                  //     },
-                  //     style: ElevatedButton.styleFrom(
-                  //       backgroundColor: const Color(0xffff6600),
-                  //       foregroundColor: Colors.white,
-                  //     ),
-                  //     child: const Text(
-                  //       "Calcular",
-                  //       style: TextStyle(fontSize: 20),
-                  //     ),
-                  //   ),
-                  // ),
-
-                  Widgetbutton(onPressed: () {
-                if (_formkey.currentState!.validate()) {
-                  calcularConta();
-                }
-              }, label: "Calcular",)
+                  Widgetbutton(
+                    onPressed: () {
+                      if (_formkey.currentState!.validate()) {
+                        calcularConta();
+                      }
+                    },
+                    label: "Calcular",
+                  ),
                 ],
               ),
             ),
