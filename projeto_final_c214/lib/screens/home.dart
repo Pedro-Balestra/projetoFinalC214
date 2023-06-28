@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:projeto_final_c214/widgets/widgetSlider.dart';
 
 import '../widgets/widgetAppBar.dart';
+import '../widgets/widgetButton.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -165,25 +166,31 @@ class _HomeState extends State<Home> {
                   const SizedBox(
                     height: 20,
                   ),
-                  SizedBox(
-                    width: double.infinity,
-                    height: 50,
-                    child: ElevatedButton(
-                      onPressed: () {
-                        if (_formkey.currentState!.validate()) {
-                          calcularConta();
-                        }
-                      },
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: const Color(0xffff6600),
-                        foregroundColor: Colors.white,
-                      ),
-                      child: const Text(
-                        "Calcular",
-                        style: TextStyle(fontSize: 20),
-                      ),
-                    ),
-                  ),
+                  // SizedBox(
+                  //   width: double.infinity,
+                  //   height: 50,
+                  //   child: ElevatedButton(
+                  //     onPressed: () {
+                  //       if (_formkey.currentState!.validate()) {
+                  //         calcularConta();
+                  //       }
+                  //     },
+                  //     style: ElevatedButton.styleFrom(
+                  //       backgroundColor: const Color(0xffff6600),
+                  //       foregroundColor: Colors.white,
+                  //     ),
+                  //     child: const Text(
+                  //       "Calcular",
+                  //       style: TextStyle(fontSize: 20),
+                  //     ),
+                  //   ),
+                  // ),
+
+                  Widgetbutton(onPressed: () {
+                if (_formkey.currentState!.validate()) {
+                  calcularConta();
+                }
+              }, label: "Calcular",)
                 ],
               ),
             ),
