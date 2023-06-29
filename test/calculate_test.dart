@@ -168,7 +168,7 @@ void main() {
 
       totalPagar = calculaTotal(
           totalconta, qtdPessoas, calculaComissao(totalconta, taxa));
-      expect(totalPagar, 50);
+      expect(totalPagar, isNot(50));
     });
     test('Testar cálculo do valor a pagar por pessoa != 30', () {
       double totalconta = 1230;
@@ -178,7 +178,7 @@ void main() {
 
       totalPagar = calculaTotal(
           totalconta, qtdPessoas, calculaComissao(totalconta, taxa));
-      expect(totalPagar, 30);
+      expect(totalPagar, isNot(30));
     });
     test('Testar cálculo do valor a pagar por pessoa != 62,3', () {
       double totalconta = 238;
@@ -188,7 +188,7 @@ void main() {
 
       totalPagar = calculaTotal(
           totalconta, qtdPessoas, calculaComissao(totalconta, taxa));
-      expect(totalPagar, 62.3);
+      expect(totalPagar, isNot(62.3));
     });
     test('Testar cálculo do valor a pagar por pessoa != 26.58', () {
       double totalconta = 620;
@@ -198,7 +198,7 @@ void main() {
 
       totalPagar = calculaTotal(
           totalconta, qtdPessoas, calculaComissao(totalconta, taxa));
-      expect(totalPagar, 26.58);
+      expect(totalPagar, isNot(26.58));
     });
   });
 }
