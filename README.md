@@ -18,7 +18,7 @@
 
 ## 🎓 Sobre o projeto
 
-O aplicativo **Racha Cuca** foi desenvolvido para o projeto final da disciplina C214 - Engenharia de Software, para o curso de Engenharia de Computação pelo *[INATEL](https://inatel.br/home/)*.
+O aplicativo **Racha Conta** foi desenvolvido para o projeto final da disciplina C214 - Engenharia de Software, para o curso de Engenharia de Computação pelo *[INATEL](https://inatel.br/home/)*.
 
 A ideação veio de uma corriqueira que vivemos. Ao sair com amigos, é normal querer dividir a conta de forma igualitária entre todos. Na hora de pagar fica convuso fazer as contas de quanto fica para cada pessoa. Baseado nisso, criamos um aplicativo que permite o usuário entrar com  o valor total do pedido, a quantidade de pessoas e o valor da taxa do garçom e o mesmo retornará o valor que todos deverão pagar.
 
