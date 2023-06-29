@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../func/calculate.dart';
 import '../widgets/widgetAppBar.dart';
 import '../widgets/widgetButton.dart';
 import '../widgets/widgetSlider.dart';
@@ -17,6 +18,8 @@ class _HomeState extends State<Home> {
   double taxa = 0;
   double totalconta = 0, totalpagar = 0, comissao = 0;
   int qntpessoas = 0;
+  double total = 0;
+  //Calculate calc = new Calculate();
 
   //Criando a chave do form
   final _formkey = GlobalKey<FormState>();
@@ -26,17 +29,14 @@ class _HomeState extends State<Home> {
   TextEditingController txtQtd = TextEditingController();
 
   void calcularConta() {
-    // 1 passo - Receber os valores
     setState(
           () {
         totalconta = double.parse(txtTotal.text);
         qntpessoas = int.parse(txtQtd.text);
 
-        // 2 passo - Calcular a comissao do garçon
-        comissao = (taxa * totalconta) / 100;
+        comissao = calcula_comissao(totalconta, taxa);
 
-        // 3 passo - Calcular o total por pessoa
-        totalpagar = (totalconta + comissao) / qntpessoas;
+        total = calcula_total(totalconta, qntpessoas, comissao);
 
         showDialog(
           context: context,
@@ -61,7 +61,7 @@ class _HomeState extends State<Home> {
                   style: const TextStyle(fontWeight: FontWeight.bold),
                 ),
                 Text(
-                  "TOTAL POR PESSOA: R\$ $totalpagar",
+                  "TOTAL POR PESSOA: R\$ $total",
                   style: const TextStyle(fontWeight: FontWeight.bold),
                 ),
               ],
