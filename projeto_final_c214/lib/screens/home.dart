@@ -30,13 +30,13 @@ class _HomeState extends State<Home> {
 
   void calcularConta() {
     setState(
-          () {
+      () {
         totalconta = double.parse(txtTotal.text);
         qntpessoas = int.parse(txtQtd.text);
 
-        comissao = calcula_comissao(totalconta, taxa);
+        comissao = calculaComissao(totalconta, taxa);
 
-        total = calcula_total(totalconta, qntpessoas, comissao);
+        total = calculaTotal(totalconta, qntpessoas, comissao);
 
         showDialog(
           context: context,
@@ -53,15 +53,15 @@ class _HomeState extends State<Home> {
                   height: 20,
                 ),
                 Text(
-                  "O TOTAL DA CONTA: R\$ $totalconta",
+                  "O TOTAL DA CONTA: R\$ ${totalconta.toStringAsFixed(2)}",
                   style: const TextStyle(fontWeight: FontWeight.bold),
                 ),
                 Text(
-                  "TAXA DO GARÇOM: R\$ $comissao",
+                  "TAXA DO GARÇOM: R\$ ${comissao.toStringAsFixed(2)}",
                   style: const TextStyle(fontWeight: FontWeight.bold),
                 ),
                 Text(
-                  "TOTAL POR PESSOA: R\$ $total",
+                  "TOTAL POR PESSOA: R\$ ${total.toStringAsFixed(2)}",
                   style: const TextStyle(fontWeight: FontWeight.bold),
                 ),
               ],
@@ -97,7 +97,7 @@ class _HomeState extends State<Home> {
                 children: [
                   Padding(
                     padding:
-                    const EdgeInsets.only(top: 40, left: 130, right: 130),
+                        const EdgeInsets.only(top: 40, left: 130, right: 130),
                     child: Image.asset("assets/icon_money.png"),
                   ),
                   const SizedBox(
@@ -126,7 +126,7 @@ class _HomeState extends State<Home> {
                     divisions: 10,
                     onChanged: (double valor) {
                       setState(
-                            () {
+                        () {
                           taxa = valor;
                         },
                       );
