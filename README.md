@@ -100,38 +100,50 @@ $ flutter test
 ```
 
 ---
-
 ## 👥 Autores
-
-<h4 align="left">
-    <img style="border-radius: 50%; margin-right: 30px" src="https://avatars.githubusercontent.com/pedro-balestra" width="180px;" alt=""/>
-</h4>
-
-Pedro Balestra
-
-[![Linkedin Badge](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/pedro-balestra/)
-[![Outlook Badge](https://img.shields.io/badge/Outlook-0078D4?style=for-the-badge&logo=microsoft-outlook&logoColor=white)](mailto:gabriel.barboza@gec.inatel.br)
-
-<h4 align="left">
-    <img style="border-radius: 50%; margin-right: 30px" src="https://avatars.githubusercontent.com/ThiagoMiguel7" width="180px;" alt=""/>
-</h4>
-
-
-Thiago Miguel
-
-[![Linkedin Badge](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/thiago-miguel-b706b91a6/)
-[![Outlook Badge](https://img.shields.io/badge/Outlook-0078D4?style=for-the-badge&logo=microsoft-outlook&logoColor=white)](mailto:thiago.miguel@gec.inatel.br)
-
-
-<h4 align="left">
-    <img style="border-radius: 50%; margin-right: 30px" src="https://avatars.githubusercontent.com/wesley-marcos" width="180px;" alt=""/>
-</h4>
-
-Wesley Marcos
-
-
-[![Linkedin Badge](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/wesley-marcos-borges/)
-[![Outlook Badge](https://img.shields.io/badge/Outlook-0078D4?style=for-the-badge&logo=microsoft-outlook&logoColor=white)](mailto:wesley.marcos@gec.inatel.br)
+<table>
+  <tr>
+    <td>
+      <h4 align="center">
+        <img style="border-radius: 50%" src="https://avatars.githubusercontent.com/pedro-balestra" width="180px;" alt="Pedro Balestra">
+      </h4>
+      <strong>Pedro Balestra</strong>
+      <br>
+      <a href="https://www.linkedin.com/in/pedro-balestra/">
+        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Badge">
+      </a>
+      <a href="mailto:pedro.balestra@outlook.com">
+        <img src="https://img.shields.io/badge/Outlook-0078D4?style=for-the-badge&logo=microsoft-outlook&logoColor=white" alt="Outlook Badge">
+      </a>
+    </td>
+    <td>
+      <h4 align="center">
+        <img style="border-radius: 50%" src="https://avatars.githubusercontent.com/ThiagoMiguel7" width="180px;" alt="Thiago Miguel">
+      </h4>
+      <strong>Thiago Miguel</strong>
+      <br>
+      <a href="https://www.linkedin.com/in/thiago-miguel-b706b91a6/">
+        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Badge">
+      </a>
+      <a href="mailto:thiago.miguel@gec.inatel.br">
+        <img src="https://img.shields.io/badge/Outlook-0078D4?style=for-the-badge&logo=microsoft-outlook&logoColor=white" alt="Outlook Badge">
+      </a>
+    </td>
+    <td>
+      <h4 align="center">
+        <img style="border-radius: 50%" src="https://avatars.githubusercontent.com/wesley-marcos" width="180px;" alt="Wesley Marcos">
+      </h4>
+      <strong>Wesley Marcos</strong>
+      <br>
+      <a href="https://www.linkedin.com/in/wesley-marcos-borges/">
+        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Badge">
+      </a>
+      <a href="mailto:wesley.marcos@gec.inatel.br">
+        <img src="https://img.shields.io/badge/Outlook-0078D4?style=for-the-badge&logo=microsoft-outlook&logoColor=white" alt="Outlook Badge">
+      </a>
+    </td>
+  </tr>
+</table>
 
 ---
 ## 📝 Licença
