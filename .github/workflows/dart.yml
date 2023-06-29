@@ -1,9 +1,9 @@
 name: CI Projeto Final
 on:
   push:
-    branches: [ "main" , "features", "test"]
+    branches: [ "main" ]
   pull_request:
-    branches: ["main" , "features", "test"]
+    branches: ["main" ]
 
 jobs:
   build:  
