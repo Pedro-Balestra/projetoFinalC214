@@ -148,4 +148,57 @@ void main() {
       expect(totalPagar, 71.43);
     });
   });
+
+  group("Testes Negativos de Cálculos de valor total a pagar por pessoa", () {
+    test('Testar cálculo do valor a pagar por pessoa != 100', () {
+      double totalconta = 165;
+      int qtdPessoas = 2;
+      double taxa = 10;
+      double totalPagar = 0;
+
+      totalPagar = calculaTotal(
+          totalconta, qtdPessoas, calculaComissao(totalconta, taxa));
+      expect(totalPagar, isNot(100));
+    });
+    test('Testar cálculo do valor a pagar por pessoa != 50', () {
+      double totalconta = 180;
+      int qtdPessoas = 6;
+      double taxa = 6;
+      double totalPagar = 0;
+
+      totalPagar = calculaTotal(
+          totalconta, qtdPessoas, calculaComissao(totalconta, taxa));
+      expect(totalPagar, 50);
+    });
+    test('Testar cálculo do valor a pagar por pessoa != 30', () {
+      double totalconta = 1230;
+      int qtdPessoas = 5;
+      double taxa = 10;
+      double totalPagar = 0;
+
+      totalPagar = calculaTotal(
+          totalconta, qtdPessoas, calculaComissao(totalconta, taxa));
+      expect(totalPagar, 30);
+    });
+    test('Testar cálculo do valor a pagar por pessoa != 62,3', () {
+      double totalconta = 238;
+      int qtdPessoas = 3;
+      double taxa = 10;
+      double totalPagar = 0;
+
+      totalPagar = calculaTotal(
+          totalconta, qtdPessoas, calculaComissao(totalconta, taxa));
+      expect(totalPagar, 62.3);
+    });
+    test('Testar cálculo do valor a pagar por pessoa != 26.58', () {
+      double totalconta = 620;
+      int qtdPessoas = 7;
+      double taxa = 0;
+      double totalPagar = 0;
+
+      totalPagar = calculaTotal(
+          totalconta, qtdPessoas, calculaComissao(totalconta, taxa));
+      expect(totalPagar, 26.58);
+    });
+  });
 }
