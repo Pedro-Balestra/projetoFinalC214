@@ -8,7 +8,7 @@ void main() {
       double taxa = 10;
       double comissao = 0;
 
-      comissao = calcula_comissao(totalconta, taxa);
+      comissao = calculaComissao(totalconta, taxa);
       expect(comissao, 15);
     });
 
@@ -17,7 +17,7 @@ void main() {
       double taxa = 10;
       double comissao = 0;
 
-      comissao = calcula_comissao(totalconta, taxa);
+      comissao = calculaComissao(totalconta, taxa);
       expect(comissao, 10);
     });
 
@@ -26,7 +26,7 @@ void main() {
       double taxa = 10;
       double comissao = 0;
 
-      comissao = calcula_comissao(totalconta, taxa);
+      comissao = calculaComissao(totalconta, taxa);
       expect(comissao, 20);
     });
 
@@ -35,7 +35,7 @@ void main() {
       double taxa = 10;
       double comissao = 0;
 
-      comissao = calcula_comissao(totalconta, taxa);
+      comissao = calculaComissao(totalconta, taxa);
       expect(comissao, 25);
     });
 
@@ -44,7 +44,7 @@ void main() {
       double taxa = 10;
       double comissao = 0;
 
-      comissao = calcula_comissao(totalconta, taxa);
+      comissao = calculaComissao(totalconta, taxa);
       expect(comissao, 50);
     });
   });
@@ -55,7 +55,7 @@ void main() {
       double taxa = 10;
       double comissao = 0;
 
-      comissao = calcula_comissao(totalconta, taxa);
+      comissao = calculaComissao(totalconta, taxa);
       expect(comissao, isNot(15));
     });
 
@@ -64,7 +64,7 @@ void main() {
       double taxa = 5;
       double comissao = 0;
 
-      comissao = calcula_comissao(totalconta, taxa);
+      comissao = calculaComissao(totalconta, taxa);
       expect(comissao, isNot(60));
     });
 
@@ -73,7 +73,7 @@ void main() {
       double taxa = 2;
       double comissao = 0;
 
-      comissao = calcula_comissao(totalconta, taxa);
+      comissao = calculaComissao(totalconta, taxa);
       expect(comissao, isNot(90));
     });
 
@@ -82,7 +82,7 @@ void main() {
       double taxa = 7;
       double comissao = 0;
 
-      comissao = calcula_comissao(totalconta, taxa);
+      comissao = calculaComissao(totalconta, taxa);
       expect(comissao, isNot(132));
     });
 
@@ -91,8 +91,61 @@ void main() {
       double taxa = 6;
       double comissao = 0;
 
-      comissao = calcula_comissao(totalconta, taxa);
+      comissao = calculaComissao(totalconta, taxa);
       expect(comissao, isNot(190));
+    });
+  });
+
+  group("Testes de Cálculos de valor total a pagar por pessoa", () {
+    test('Testar cálculo do valor a pagar por pessoa == 55', () {
+      double totalconta = 150;
+      int qtdPessoas = 3;
+      double taxa = 10;
+      double totalPagar = 0;
+
+      totalPagar = calculaTotal(
+          totalconta, qtdPessoas, calculaComissao(totalconta, taxa));
+      expect(totalPagar, 55);
+    });
+    test('Testar cálculo do valor a pagar por pessoa == 87.5', () {
+      double totalconta = 500;
+      int qtdPessoas = 6;
+      double taxa = 5;
+      double totalPagar = 0;
+
+      totalPagar = calculaTotal(
+          totalconta, qtdPessoas, calculaComissao(totalconta, taxa));
+      expect(totalPagar, 87.5);
+    });
+    test('Testar cálculo do valor a pagar por pessoa == 275', () {
+      double totalconta = 2500;
+      int qtdPessoas = 10;
+      double taxa = 10;
+      double totalPagar = 0;
+
+      totalPagar = calculaTotal(
+          totalconta, qtdPessoas, calculaComissao(totalconta, taxa));
+      expect(totalPagar, 275);
+    });
+    test('Testar cálculo do valor a pagar por pessoa == 5.5', () {
+      double totalconta = 50;
+      int qtdPessoas = 10;
+      double taxa = 10;
+      double totalPagar = 0;
+
+      totalPagar = calculaTotal(
+          totalconta, qtdPessoas, calculaComissao(totalconta, taxa));
+      expect(totalPagar, 5.5);
+    });
+    test('Testar cálculo do valor a pagar por pessoa == 71.43', () {
+      double totalconta = 500;
+      int qtdPessoas = 7;
+      double taxa = 0;
+      double totalPagar = 0;
+
+      totalPagar = calculaTotal(
+          totalconta, qtdPessoas, calculaComissao(totalconta, taxa));
+      expect(totalPagar, 71.43);
     });
   });
 }

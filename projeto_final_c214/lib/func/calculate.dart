@@ -1,7 +1,4 @@
-
-
-double calcula_comissao(double totalconta, double taxa){
-
+double calculaComissao(double totalconta, double taxa) {
   double comissao;
 
   comissao = (taxa * totalconta) / 100;
@@ -9,11 +6,10 @@ double calcula_comissao(double totalconta, double taxa){
   return comissao;
 }
 
-double calcula_total(double totalconta, int qtd_pessoas, double comissao){
-
+double calculaTotal(double totalconta, int qtdPessoas, double comissao) {
   double totalpagar;
 
-  totalpagar = (totalconta + comissao) / qtd_pessoas;
+  totalpagar = (totalconta + comissao) / qtdPessoas;
 
-  return totalpagar;
+  return double.parse(totalpagar.toStringAsFixed(2));
 }
